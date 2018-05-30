@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: gateway,eureka
+      label: master
+      discovery:
+        enabled: true
+        serviceId: config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
