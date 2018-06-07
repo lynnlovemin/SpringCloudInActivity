@@ -18,7 +18,10 @@
         <module>user</module>
     </modules>
     <packaging>pom</packaging>
-
+    <properties>
+        <mybatis.version>1.1.1</mybatis.version>
+        <mysql.version>5.1.40</mysql.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -35,6 +38,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
         <dependency>
             <groupId>com.lynn</groupId>

@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      name: user,eureka,feign
+      name: user,eureka,feign,database
       label: master
       discovery:
         enabled: true
