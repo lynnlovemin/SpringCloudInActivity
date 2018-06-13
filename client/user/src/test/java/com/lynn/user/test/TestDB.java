@@ -1,5 +1,6 @@
 package com.lynn.user.test;
 
+import com.lynn.common.redis.Redis;
 import com.lynn.user.Application;
 import com.lynn.user.mapper.ArticleMapper;
 import org.junit.Test;
@@ -14,11 +15,15 @@ public class TestDB {
 
     @Autowired
     private ArticleMapper articleMapper;
+    @Autowired
+    private Redis redis;
 
     @Test
     public void test(){
         try {
-            System.out.println(articleMapper.searchArticleList());
+//            redis.set("hello","world");
+//            System.out.println(redis.get("hello"));
+//            System.out.println(articleMapper.searchArticleList());
         }catch (Exception e){
             e.printStackTrace();
         }

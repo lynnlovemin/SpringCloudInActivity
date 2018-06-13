@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      name: index,eureka,feign,database
+      name: index,eureka,feign,database,redis,key
       label: master
       discovery:
         enabled: true
