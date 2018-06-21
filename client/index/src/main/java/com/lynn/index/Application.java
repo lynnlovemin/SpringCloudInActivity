@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableFeignClients
 @EnableHystrixDashboard
 @EnableCircuitBreaker
-//@EnableEncrypt
+@EnableEncrypt
 public class Application {
 
     public static void main(String[] args) {
