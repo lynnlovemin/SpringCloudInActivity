@@ -1,8 +1,8 @@
 package com.lynn.user.test;
 
-import com.lynn.common.redis.Redis;
 import com.lynn.user.Application;
-import com.lynn.user.mapper.ArticleMapper;
+import com.lynn.user.model.request.LoginRequest;
+import com.lynn.user.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +14,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class TestDB {
 
     @Autowired
-    private ArticleMapper articleMapper;
-    @Autowired
-    private Redis redis;
+    private UserService userService;
 
     @Test
     public void test(){
         try {
-//            redis.set("hello","world");
-//            System.out.println(redis.get("hello"));
-//            System.out.println(articleMapper.searchArticleList());
+            LoginRequest request = new LoginRequest();
+            request.setMobile("13800138000");
+            request.setPassword("1");
+            System.out.println(userService.login(request));
         }catch (Exception e){
             e.printStackTrace();
         }
