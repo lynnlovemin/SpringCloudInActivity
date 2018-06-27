@@ -23,7 +23,7 @@ public class UserController extends BaseController {
     @RequestMapping("login")
     public SingleResult<TokenResponse> login(@Valid @RequestBody LoginRequest request, BindingResult result){
         validate(result);
-        userService.login(request);
+        return userService.login(request);
     }
 
 }
