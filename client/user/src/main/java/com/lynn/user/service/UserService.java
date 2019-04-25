@@ -34,7 +34,7 @@ public class UserService extends BaseService{
     }
 
     public SingleResult<TokenResponse> register(RegisterRequest request){
-        List<UserBean> userList = userMapper.selectUser(request.getMobile());
+        List<UserBean> userList = userMapper.selectUserByMobile(request.getMobile());
         if(null != userList && userList.size() > 0){
             String token = getToken(request.getMobile(),request.getPassword());
             TokenResponse response = new TokenResponse();
